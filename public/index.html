@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Image Upload & Camera Capture System</h1>
+        </div>
+
+        <div class="form-section">
+            <h2>Class Management</h2>
+            <div class="form-group">
+                <label for="className">Create New Class:</label>
+                <input type="text" id="className" placeholder="Enter class name">
+            </div>
+            <button id="createClassBtn" class="btn-success">Create Class</button>
+            <div class="class-list" id="classList"></div>
+        </div>
+
+        <div class="form-section">
+            <h2>Upload Images</h2>
+            <div class="form-group">
+                <label for="classSelect">Select Class:</label>
+                <select id="classSelect">
+                    <option value="">-- Select a class --</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="imageUpload">Upload Image Files:</label>
+                <input type="file" id="imageUpload" accept="image/*" multiple>
+            </div>
+            <button id="uploadBtn">Upload Images</button>
+
+            <h3>Camera Capture</h3>
+            <div class="form-group">
+                <label for="captureCount">Number of Images:</label>
+                <input type="number" id="captureCountInput" min="1" value="5">
+            </div>
+            <div class="form-group">
+                <label for="captureInterval">Interval (seconds):</label>
+                <input type="number" id="captureInterval" min="1" value="2">
+            </div>
+            <button id="startCameraBtn">Start Camera</button>
+            <button id="stopCameraBtn" class="btn-danger" disabled>Stop Camera</button>
+            <button id="captureBtn" class="btn-warning" disabled>Start Capture</button>
+
+            <div id="videoContainer" style="display: none;">
+                <video id="video" autoplay></video>
+                <div id="captureCount" style="display: none;">Capturing: 0/0</div>
+                <canvas id="canvas"></canvas>
+            </div>
+        </div>
+
+        <div class="classes-container" id="classesContainer"></div>
+
+        <div class="form-section">
+            <h2>View All Images</h2>
+            <a href="/ver-imagenes" target="_blank">
+                <button>Open Image Gallery</button>
+            </a>
+        </div>
+    </div>
+
+    <div id="notification" class="notification"></div>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
