@@ -1,5 +1,7 @@
 # Image Upload System
 
+![image](https://github.com/user-attachments/assets/2f590614-17c9-4c07-a94d-b58923db23af)
+
 A web application for dynamically creating classes and uploading images, similar to Teachable Machine.
 
 ## Features
