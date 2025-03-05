@@ -31,7 +31,6 @@ project-root/
          ├── ui.js                           
          ├── upload.js                           
          ├── utils.js                           
-         └── {class_name}/   
 
 ```
 
